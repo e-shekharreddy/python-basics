@@ -15,8 +15,13 @@ sample = {'a', 'b', 'b', 'c', 'c'}
 sample.add(1) # This prove that set is a mutable dststype
 # print(sample)
 
-set1 = {'a', 'b', 'c'}
+set1 = {'a', 'b', 'c', 'd'}
 set2 = {1, 'a', 'b', 'c'}
 # print(set1, set2)
 # print(set1.intersection(set2))
-print(set2.difference(set1))
+# print(set2.difference(set1))
+
+set1.difference_update(set2)
+# print(set1)
+all_elements = set1.union(set2)
+print(set1, set2, all_elements)
