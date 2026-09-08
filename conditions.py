@@ -27,7 +27,17 @@ environment = input("Enter your environment: ")
 environment = environment.upper()
 
 change_ticket = False
+incident_ticket = False
+is_issue = "No"
+
 if environment == "PROD":
+    is_issue = input("Issue reported by user (Yes/No)?")
+    if is_issue == "YES":
+        incident_ticket = input("please enter your incident ticcket: ")
+        if len(incident_ticket) > 0:
+            print("please proceed with resolving the incident")
+        else:
+            print("Please enter a valid incident ticket number: ")
     change_ticket = input("please enter your change ticket: ")
     if len(change_ticket) > 0:
         change_ticket = True
